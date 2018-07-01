@@ -10,8 +10,8 @@ with open(version_file) as file:
 setup(name='robotframework-sshtunnellibrary',
       version=VERSION,
       description='SSH Tunnel Library for Robot framework',
-      author='',
-      author_email='',    
+      author='C-Squad',
+      author_email='csquad.dev@gmail.com',    
       packages=[
             'SSHTunnelLibrary'
       ],
