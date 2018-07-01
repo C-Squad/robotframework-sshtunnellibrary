@@ -7,7 +7,7 @@ with open(version_file) as file:
       code = compile(file.read(), version_file, 'exec')
       exec(code)
 
-setup(name='robotframework-sshtunnel',
+setup(name='robotframework-sshtunnellibrary',
       version=VERSION,
       description='SSH Tunnel Library for Robot framework',
       author='',
