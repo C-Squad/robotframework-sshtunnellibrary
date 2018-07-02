@@ -3,7 +3,7 @@ import sshtunnel
 from robot.utils import ConnectionCache
 
 class SSHTunnelKeywords(object):
-    
+
     ROBOT_LIBRARY_SCOPE = 'GLOBAL'
     
     def __init__(self):
@@ -14,13 +14,13 @@ class SSHTunnelKeywords(object):
         return self._connections.current
 
     def start_ssh_tunnel(
-            self, 
-            alias, 
-            remote_host_ip, 
-            remote_host_port, 
-            ssh_server_ip, 
-            ssh_server_port, 
-            ssh_server_username, 
+            self,
+            alias,
+            remote_host_ip,
+            remote_host_port,
+            ssh_server_ip,
+            ssh_server_port,
+            ssh_server_username,
             ssh_server_password,
             local_host_ip='127.0.0.1',
             local_host_port=0):
@@ -29,7 +29,7 @@ class SSHTunnelKeywords(object):
         ``alias`` Robot framework alias to find the session
         ``remote_host_ip`` IP of remote host
         ``remote_host_port`` Port number of remote host to connect
-        ``ssh_server_ip`` SSH Server which has connection to remote host. 
+        ``ssh_server_ip`` SSH Server which has connection to remote host.
         ``ssh_server_port`` SSH Port of SSH Server. Usually it is 22
         ``ssh_server_username`` User name of SSH Server
         ``ssh_server_password`` Password of SSH Server
@@ -61,7 +61,7 @@ class SSHTunnelKeywords(object):
         if index_or_alias != '':
             try:
                 self.switch_connection(index_or_alias)
-                self.current.stop()              
+                self.current.stop()
                 self._connections.current = self._connections._no_current
             except:
                 pass
@@ -96,7 +96,7 @@ class SSHTunnelKeywords(object):
         """
 
         try:
-            index = self._connections._resolve_alias_or_index(index_or_alias)
+            self._connections._resolve_alias_or_index(index_or_alias)
             return True
         except ValueError:
             return False
