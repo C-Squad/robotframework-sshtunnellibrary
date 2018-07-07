@@ -12,7 +12,7 @@ setup(name='robotframework-sshtunnellibrary',
       description='SSH Tunnel Library for Robot framework',
       author='C-Squad',
       author_email='csquad.dev@gmail.com',
-      license= 'MIT',
+      license= 'Apache-2.0',
       platforms= 'any',
       packages=[
             'SSHTunnelLibrary'
