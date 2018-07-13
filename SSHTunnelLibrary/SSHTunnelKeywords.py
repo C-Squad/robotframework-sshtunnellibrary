@@ -40,6 +40,21 @@ class SSHTunnelKeywords(object):
         """
 
         sshtunnel.DAEMON = True
+        if str(local_host_port).isdigit():
+            local_host_port = int(local_host_port)
+        else:
+            raise Exception("Given local host port is not number.")
+        
+        if str(ssh_server_port).isdigit():
+            ssh_server_port = int(ssh_server_port)
+        else:
+            raise Exception("Given SSH Server port is not number.")
+        
+        if str(remote_host_port).isdigit():
+            remote_host_port = int(remote_host_port)
+        else:
+            raise Exception("Given Remote host port is not number.")
+
         server = sshtunnel.SSHTunnelForwarder(
             (ssh_server_ip, ssh_server_port),
             ssh_username=ssh_server_username,
@@ -60,9 +75,9 @@ class SSHTunnelKeywords(object):
         
         if index_or_alias != '':
             try:
-                self.switch_connection(index_or_alias)
-                self.current.stop()
-                self._connections.current = self._connections._no_current
+                if self.switch_connection(index_or_alias):
+                    self.current.stop()
+                    self._connections.current = self._connections._no_current
             except:
                 pass
 
@@ -74,10 +89,10 @@ class SSHTunnelKeywords(object):
         """
         
         old_index = self._connections.current_index
-        if index_or_alias is None:
-            self.stop_ssh_tunnel()
-        else:
+        if index_or_alias is not None:            
             self._connections.switch(index_or_alias)
+        else:
+            return False
         return old_index
 
     def get_local_port(self):
