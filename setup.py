@@ -1,5 +1,8 @@
+import re
 from setuptools import setup
 from os.path import abspath, dirname, join
+
+CURDIR = dirname(abspath(__file__))
 
 with open(join(dirname(abspath(__file__)), 'SSHTunnelLibrary', 'version.py')) as f:
     VERSION = re.search("\nVERSION = '(.*)'", f.read()).group(1)
