@@ -1,0 +1,21 @@
+language: python
+sudo: enabled
+
+python:
+  - "2.7"
+  - "3.6"
+  - "3.7"
+
+before_install:
+  - useradd testuser
+  - passwd testuser
+  - testuser
+
+install:
+  # Install ssh tunnel library.
+  - python setup.py install
+  # to See what are the packages are installed
+  - pip freeze
+
+script:
+  - py.test -v -rs test
