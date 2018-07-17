@@ -6,9 +6,8 @@ python:
   - "3.6"
 
 before_install:
-  - useradd testuser
-  - passwd testuser
-  - testuser
+  - sudo useradd test -m -s /bin/bash -G travis
+  - (echo 'test'; echo 'test') | sudo passwd test
 
 install:
   # Install ssh tunnel library.

@@ -19,8 +19,8 @@ class Test_ssh_keywords(unittest.TestCase):
             8080,
             "127.0.01",
             22,
-            "testuser",
-            "testuser",
+            "test",
+            "test",
             '127.0.0.1',
             0)
 
