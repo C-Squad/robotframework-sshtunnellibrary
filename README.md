@@ -1,6 +1,6 @@
 # robotframework-sshtunnellibrary
 
-SSHTunnelLibrary is a Robotframework library to support SSHTunnels. It will help us to connect to remote host using SSH Local Forwarding.
+SSHTunnelLibrary is a Robotframework library to support SSHTunnels. It will help to connect to remote host using SSH Local Forwarding.
 
 ## Usage
 Install robotframework-sshtunnellibrary and its dependencies via pip
