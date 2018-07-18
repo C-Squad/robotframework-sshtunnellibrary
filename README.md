@@ -3,6 +3,7 @@
 SSHTunnelLibrary is a Robotframework library to support SSHTunnels. It will help to connect to remote host using SSH Local Forwarding.
 
 [![Build Status](https://travis-ci.com/C-Squad/robotframework-sshtunnellibrary.svg?branch=master)](https://travis-ci.com/C-Squad/robotframework-sshtunnellibrary)
+[![Build Status](https://img.shields.io/pypi/l/robotframework-sshlibrary.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
 ## Usage
 Install robotframework-sshtunnellibrary and its dependencies via pip
