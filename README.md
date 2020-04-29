@@ -1,3 +1,5 @@
+NOTE: Robot framework SSH Library is now having SSH tunnel functionality so it is not necessary to use this library with it. however it is still can be used with other `connection` based libraries like REST API, Database, Seleneium etc.
+
 # robotframework-sshtunnellibrary
 
 SSHTunnelLibrary is a Robotframework library to support SSHTunnels. It will help to connect to remote host using SSH Local Forwarding.
